@@ -79,7 +79,7 @@ img {
 	margin-top:-10px;
 }
 
-.dialogo{
+.dialogo-client{
 	width:100%;
 	height:auto;
 	margin-bottom:15px;
@@ -87,14 +87,38 @@ img {
 	background:#D8F0FE;
 }
 
-.dialogo h4{
+.dialogo-local{
+	width:100%;
+	height:auto;
+	margin-bottom:15px;
+	padding:10px;
+	background:#ccffcc;
+}
+
+.dialogo-client h4{
 	font-size:15px;
 	font-weight: bold;
 	color:#8B7777;
 }
 
-.dialogo p{
+.dialogo-client p{
 	font-size:12px;
 	padding-left:15px;
 	color:#8B7777;
 }
+
+.dialogo-local h4{
+    font-size:15px;
+    font-weight: bold;
+    padding-right:15px;
+    color:#8B7777;
+}
+
+.dialogo-local p{
+    font-size:12px;
+    padding-right:15px;
+    color:#8B7777;
+}
+
+
+-

@@ -21,7 +21,7 @@ io.on('connection', function(socket){
 	});
 
 	socket.on('msgParaServidor', function(data){
-		socket.emit('msgParaCliente', {apelido: data.apelido, mensagem: data.mensagem});
+		socket.emit('msgParaCliente2', {apelido: 'Eu:', mensagem: data.mensagem});
 		socket.broadcast.emit('msgParaCliente', {apelido: data.apelido, mensagem: data.mensagem});
 	});
 

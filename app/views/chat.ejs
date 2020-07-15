@@ -114,6 +114,8 @@
 								</span>
 							</div>
 						</div>
+
+
 					
 				</div>
 			</div>
@@ -133,11 +135,21 @@
 				});
 				
 
+			socket.on('msgParaCliente2', function(data){
+				var html = '';
+
+				html += '<div class="dialogo-local">';
+					html += '<h4>' + data.apelido + '</h4>';
+					html += '<p>' + data.mensagem + '</p>';
+				html += '</div>'
+
+				$('#dialogos').append(html);
+			})
 
 			socket.on('msgParaCliente', function(data){
 				var html = '';
 
-				html += '<div class="dialogo">';
+				html += '<div class="dialogo-client">';
 					html += '<h4>' + data.apelido + '</h4>';
 					html += '<p>' + data.mensagem + '</p>';
 				html += '</div>'
