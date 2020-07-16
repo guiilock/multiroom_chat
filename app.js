@@ -19,10 +19,16 @@ io.on('connection', function(socket){
 	socket.on('disconnect', function(){
 		console.log('Usuario desconectou');
 	});
-
+//dialogo
 	socket.on('msgParaServidor', function(data){
 		socket.emit('msgParaCliente2', {apelido: 'Eu:', mensagem: data.mensagem});
 		socket.broadcast.emit('msgParaCliente', {apelido: data.apelido, mensagem: data.mensagem});
+
+//participantes
+	socket.on('connection', function(socket, data){
+		socket.emit('participantes', {apelido: data.apelido});
+		socket.broadcast.emit('participantes', {apelido: data.apelido});
 	});
+});
 
 });
